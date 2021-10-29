@@ -1,3 +1,5 @@
+set +x
+
 uri_web_preview () {
   ZONE=$(curl -s -H "Metadata-Flavor: Google" metadata/computeMetadata/v1/instance/zone)
   ZONE="${ZONE##*/}"
