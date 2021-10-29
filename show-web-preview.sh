@@ -12,7 +12,7 @@ uri_web_preview () {
   #echo "https://${PORT}-${MACHINE}.cs-${REGION}-vpcf.cloudshell.dev/"
   AUTHUSER=${AUTHUSER:-0}
   ADDPATH=""
-  if [ -n "$2" ];
+  if [ $# -ge 2 ] && [ -n "$2" ];
   then
     ADDPATH="&devshellProxyPath=%2F$2"
   fi
